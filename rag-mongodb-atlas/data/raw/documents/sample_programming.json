@@ -1,0 +1,202 @@
+[
+  {
+    "title": "Introducción a Python",
+    "content": "Python es un lenguaje de programación interpretado, de alto nivel y de propósito general. Fue creado por Guido van Rossum y lanzado por primera vez en 1991. Python enfatiza la legibilidad del código con el uso de sangría significativa. Es ampliamente utilizado en desarrollo web, ciencia de datos, inteligencia artificial, automatización y scripting. Las características principales de Python incluyen tipado dinámico, recolección automática de basura, y soporte para múltiples paradigmas de programación incluyendo programación orientada a objetos, imperativa, funcional y procedimental.",
+    "tags": ["python", "programming", "beginner"],
+    "metadata": {
+      "category": "programming",
+      "difficulty": "beginner",
+      "author": "Tech Education"
+    }
+  },
+  {
+    "title": "JavaScript y Node.js",
+    "content": "JavaScript es el lenguaje de programación de la web. Originalmente diseñado para ejecutarse en navegadores, ahora también se ejecuta en servidores gracias a Node.js. Node.js es un entorno de ejecución de JavaScript construido sobre el motor V8 de Chrome. Permite a los desarrolladores usar JavaScript para escribir código del lado del servidor. Node.js utiliza un modelo de E/S sin bloqueo y orientado a eventos que lo hace ligero y eficiente. Es perfecto para aplicaciones en tiempo real que se ejecutan en dispositivos distribuidos.",
+    "tags": ["javascript", "nodejs", "web", "backend"],
+    "metadata": {
+      "category": "programming",
+      "difficulty": "intermediate",
+      "author": "Web Dev Pro"
+    }
+  },
+  {
+    "title": "Bases de Datos NoSQL: MongoDB",
+    "content": "MongoDB es una base de datos NoSQL orientada a documentos. A diferencia de las bases de datos relacionales tradicionales, MongoDB almacena datos en documentos tipo JSON con esquemas flexibles. Esto hace que la integración de datos en ciertas aplicaciones sea más fácil y rápida. MongoDB es altamente escalable y proporciona alto rendimiento. Utiliza un modelo de datos flexible que permite almacenar datos semi-estructurados. Es ideal para aplicaciones que requieren grandes volúmenes de datos y necesitan escalar horizontalmente. MongoDB Atlas es la versión en la nube totalmente administrada.",
+    "tags": ["mongodb", "nosql", "database", "cloud"],
+    "metadata": {
+      "category": "database",
+      "difficulty": "intermediate",
+      "author": "Database Expert"
+    }
+  },
+  {
+    "title": "Inteligencia Artificial y Machine Learning",
+    "content": "La Inteligencia Artificial (IA) es la simulación de procesos de inteligencia humana por parte de máquinas. El Machine Learning es un subconjunto de IA que permite a las computadoras aprender de datos sin ser programadas explícitamente. Los algoritmos de ML pueden identificar patrones en grandes conjuntos de datos y hacer predicciones. Las principales categorías incluyen aprendizaje supervisado, no supervisado y por refuerzo. Python es el lenguaje más popular para ML, con librerías como TensorFlow, PyTorch, scikit-learn y Keras. Las aplicaciones van desde reconocimiento de imágenes hasta procesamiento de lenguaje natural.",
+    "tags": ["ai", "machine-learning", "data-science", "python"],
+    "metadata": {
+      "category": "artificial-intelligence",
+      "difficulty": "advanced",
+      "author": "AI Research"
+    }
+  },
+  {
+    "title": "Docker y Contenedores",
+    "content": "Docker es una plataforma que permite desarrollar, enviar y ejecutar aplicaciones en contenedores. Los contenedores son unidades estándar de software que empaquetan código y todas sus dependencias para que la aplicación se ejecute de forma rápida y confiable en diferentes entornos. A diferencia de las máquinas virtuales, los contenedores comparten el kernel del sistema operativo host, haciéndolos más ligeros y eficientes. Docker facilita el desarrollo, las pruebas y el despliegue de aplicaciones. Docker Compose permite definir y ejecutar aplicaciones multi-contenedor.",
+    "tags": ["docker", "containers", "devops", "deployment"],
+    "metadata": {
+      "category": "devops",
+      "difficulty": "intermediate",
+      "author": "DevOps Guide"
+    }
+  },
+  {
+    "title": "APIs RESTful con FastAPI",
+    "content": "FastAPI es un framework web moderno y de alto rendimiento para construir APIs con Python 3.7+ basado en type hints estándar de Python. Es uno de los frameworks más rápidos disponibles, comparable a NodeJS y Go. FastAPI genera automáticamente documentación interactiva usando Swagger UI y ReDoc. Incluye validación automática de datos usando Pydantic. Soporta async/await nativo para operaciones asincrónicas. Es ideal para construir microservicios y APIs REST modernas. La validación de datos y la serialización son automáticas gracias a los type hints.",
+    "tags": ["fastapi", "python", "api", "rest", "web"],
+    "metadata": {
+      "category": "web-development",
+      "difficulty": "intermediate",
+      "author": "API Master"
+    }
+  },
+  {
+    "title": "Git y Control de Versiones",
+    "content": "Git es un sistema de control de versiones distribuido gratuito y de código abierto. Permite a los desarrolladores rastrear cambios en el código fuente durante el desarrollo de software. Git fue creado por Linus Torvalds en 2005. Las características principales incluyen ramificación (branching) y fusión (merging) eficientes. GitHub, GitLab y Bitbucket son plataformas populares que alojan repositorios Git. Los comandos básicos incluyen: git init, git clone, git add, git commit, git push, y git pull. El flujo de trabajo típico involucra crear ramas para nuevas características, hacer commits, y fusionar de vuelta a la rama principal.",
+    "tags": ["git", "version-control", "github", "development"],
+    "metadata": {
+      "category": "tools",
+      "difficulty": "beginner",
+      "author": "Version Control 101"
+    }
+  },
+  {
+    "title": "React: Biblioteca JavaScript",
+    "content": "React es una biblioteca de JavaScript de código abierto para construir interfaces de usuario, desarrollada por Facebook. Se basa en componentes reutilizables que gestionan su propio estado. React usa un DOM virtual para optimizar el rendimiento, actualizando solo las partes necesarias. JSX permite escribir HTML dentro de JavaScript. React Hooks introdujeron useState y useEffect para manejar estado y efectos secundarios en componentes funcionales. Next.js es un framework popular construido sobre React que añade renderizado del lado del servidor y generación de sitios estáticos.",
+    "tags": ["react", "javascript", "frontend", "web", "ui"],
+    "metadata": {
+      "category": "frontend",
+      "difficulty": "intermediate",
+      "author": "Frontend Dev"
+    }
+  },
+  {
+    "title": "Seguridad en Aplicaciones Web",
+    "content": "La seguridad web es crucial para proteger aplicaciones y datos de usuarios. Las vulnerabilidades comunes incluyen: Cross-Site Scripting (XSS), SQL Injection, Cross-Site Request Forgery (CSRF), y autenticación insegura. OWASP Top 10 es una lista de las vulnerabilidades más críticas. Las mejores prácticas incluyen: validar toda entrada del usuario, usar HTTPS, implementar autenticación robusta, hashear contraseñas con algoritmos como bcrypt, usar tokens CSRF, y mantener dependencias actualizadas. Nunca almacenar credenciales en código fuente. Usar variables de entorno para información sensible.",
+    "tags": ["security", "web", "owasp", "best-practices"],
+    "metadata": {
+      "category": "security",
+      "difficulty": "advanced",
+      "author": "Security Expert"
+    }
+  },
+  {
+    "title": "Cloud Computing: AWS, Azure y GCP",
+    "content": "Cloud computing proporciona acceso bajo demanda a recursos informáticos a través de internet. Los tres principales proveedores son Amazon Web Services (AWS), Microsoft Azure y Google Cloud Platform (GCP). AWS ofrece más de 200 servicios incluyendo EC2 (computación), S3 (almacenamiento), y RDS (bases de datos). Azure se integra bien con productos Microsoft. GCP destaca en machine learning y análisis de datos. Los modelos de servicio incluyen IaaS (Infraestructura), PaaS (Plataforma), y SaaS (Software). Las ventajas incluyen escalabilidad, pago por uso, y disponibilidad global.",
+    "tags": ["cloud", "aws", "azure", "gcp", "infrastructure"],
+    "metadata": {
+      "category": "cloud-computing",
+      "difficulty": "intermediate",
+      "author": "Cloud Architect"
+    }
+  },
+  {
+    "title": "Testing y QA en Desarrollo de Software",
+    "content": "El testing es esencial para asegurar la calidad del software. Los tipos principales incluyen: unit testing (pruebas unitarias), integration testing (pruebas de integración), y end-to-end testing (pruebas E2E). Para Python, pytest es el framework más popular. Para JavaScript, Jest y Mocha son comunes. TDD (Test-Driven Development) es una metodología donde se escriben las pruebas antes del código. El código coverage mide qué porcentaje del código está cubierto por tests. CI/CD pipelines automatizan la ejecución de tests. Las pruebas ayudan a detectar bugs temprano y facilitan el refactoring.",
+    "tags": ["testing", "qa", "pytest", "jest", "tdd"],
+    "metadata": {
+      "category": "quality-assurance",
+      "difficulty": "intermediate",
+      "author": "QA Specialist"
+    }
+  },
+  {
+    "title": "Arquitectura de Microservicios",
+    "content": "Los microservicios son un estilo arquitectónico que estructura una aplicación como una colección de servicios pequeños y autónomos. Cada microservicio se ejecuta en su propio proceso y se comunica mediante APIs bien definidas. Las ventajas incluyen: escalabilidad independiente, desarrollo en paralelo por equipos diferentes, y flexibilidad tecnológica. Los desafíos incluyen: complejidad operacional, comunicación entre servicios, y transacciones distribuidas. Kubernetes es popular para orquestar contenedores de microservicios. Service mesh como Istio ayuda a gestionar la comunicación. Event-driven architecture con mensajería es común.",
+    "tags": ["microservices", "architecture", "kubernetes", "distributed-systems"],
+    "metadata": {
+      "category": "architecture",
+      "difficulty": "advanced",
+      "author": "Solutions Architect"
+    }
+  },
+  {
+    "title": "GraphQL: Alternativa a REST",
+    "content": "GraphQL es un lenguaje de consulta para APIs desarrollado por Facebook. A diferencia de REST, GraphQL permite a los clientes solicitar exactamente los datos que necesitan. Esto elimina over-fetching y under-fetching de datos. GraphQL usa un sistema de tipos fuerte que define el esquema de la API. Las queries obtienen datos, las mutations modifican datos, y las subscriptions permiten actualizaciones en tiempo real. Apollo es una popular implementación de cliente y servidor GraphQL. Hasura y Prisma generan APIs GraphQL automáticamente desde bases de datos.",
+    "tags": ["graphql", "api", "apollo", "web"],
+    "metadata": {
+      "category": "web-development",
+      "difficulty": "intermediate",
+      "author": "API Innovation"
+    }
+  },
+  {
+    "title": "Procesamiento de Lenguaje Natural (NLP)",
+    "content": "El Procesamiento de Lenguaje Natural es una rama de IA que ayuda a las computadoras a entender, interpretar y manipular el lenguaje humano. Las aplicaciones incluyen: traducción automática, análisis de sentimientos, chatbots, y resumen de textos. Las técnicas modernas usan deep learning y transformers. BERT, GPT, y otros modelos pre-entrenados han revolucionado el NLP. Bibliotecas populares incluyen NLTK, spaCy, y Hugging Face Transformers. Los embeddings de palabras (word embeddings) como Word2Vec representan palabras como vectores. Los LLMs (Large Language Models) como GPT-4 pueden generar texto coherente.",
+    "tags": ["nlp", "ai", "machine-learning", "transformers", "llm"],
+    "metadata": {
+      "category": "artificial-intelligence",
+      "difficulty": "advanced",
+      "author": "NLP Researcher"
+    }
+  },
+  {
+    "title": "DevOps y CI/CD",
+    "content": "DevOps es una cultura y conjunto de prácticas que combina desarrollo de software (Dev) y operaciones IT (Ops). El objetivo es acortar el ciclo de vida del desarrollo y proporcionar entrega continua con alta calidad. CI/CD significa Continuous Integration y Continuous Deployment. Jenkins, GitLab CI, GitHub Actions, y CircleCI son herramientas populares de CI/CD. La integración continua involucra fusionar código frecuentemente y ejecutar tests automáticamente. El deployment continuo automatiza el release a producción. Infrastructure as Code (IaC) con herramientas como Terraform permite versionar infraestructura.",
+    "tags": ["devops", "ci-cd", "jenkins", "automation", "infrastructure"],
+    "metadata": {
+      "category": "devops",
+      "difficulty": "intermediate",
+      "author": "DevOps Engineer"
+    }
+  },
+  {
+    "title": "TypeScript: JavaScript Tipado",
+    "content": "TypeScript es un superset de JavaScript que añade tipado estático opcional. Desarrollado por Microsoft, TypeScript se compila a JavaScript plano. Los tipos ayudan a detectar errores en tiempo de desarrollo antes que en ejecución. TypeScript mejora el autocompletado en IDEs y hace el código más mantenible. Soporta características modernas de JavaScript y añade interfaces, enums, generics, y decoradores. Es ampliamente usado en proyectos React, Angular, y Node.js. El compilador de TypeScript (tsc) transpila el código TypeScript a JavaScript compatible con navegadores.",
+    "tags": ["typescript", "javascript", "programming", "web"],
+    "metadata": {
+      "category": "programming",
+      "difficulty": "intermediate",
+      "author": "TypeScript Guide"
+    }
+  },
+  {
+    "title": "Blockchain y Criptomonedas",
+    "content": "Blockchain es una tecnología de registro distribuido que mantiene un registro seguro y descentralizado de transacciones. Bitcoin fue la primera aplicación de blockchain, introducida en 2008. Ethereum extendió blockchain con smart contracts: programas que se ejecutan en la blockchain. La descentralización elimina la necesidad de intermediarios de confianza. Los bloques están enlazados criptográficamente y son inmutables. El consenso (como Proof of Work o Proof of Stake) asegura que todos los nodos estén de acuerdo. Las aplicaciones incluyen finanzas descentralizadas (DeFi), NFTs, y gestión de cadena de suministro.",
+    "tags": ["blockchain", "cryptocurrency", "bitcoin", "ethereum", "web3"],
+    "metadata": {
+      "category": "emerging-tech",
+      "difficulty": "advanced",
+      "author": "Blockchain Expert"
+    }
+  },
+  {
+    "title": "Desarrollo Mobile: iOS y Android",
+    "content": "El desarrollo móvil se divide en nativo y multiplataforma. Para iOS, Swift es el lenguaje moderno que reemplazó Objective-C. Para Android, Kotlin es ahora preferido sobre Java. React Native permite escribir apps para iOS y Android usando JavaScript. Flutter de Google usa Dart y proporciona widgets nativos. Las ventajas del desarrollo nativo incluyen mejor rendimiento y acceso completo a APIs del sistema. Las ventajas multiplataforma incluyen código compartido y desarrollo más rápido. Firebase proporciona backend como servicio para apps móviles con autenticación, base de datos, y notificaciones push.",
+    "tags": ["mobile", "ios", "android", "react-native", "flutter"],
+    "metadata": {
+      "category": "mobile-development",
+      "difficulty": "intermediate",
+      "author": "Mobile Dev"
+    }
+  },
+  {
+    "title": "Bases de Datos SQL: PostgreSQL y MySQL",
+    "content": "Las bases de datos SQL (relacionales) organizan datos en tablas con esquemas definidos. PostgreSQL es una base de datos objeto-relacional de código abierto conocida por su robustez y características avanzadas. MySQL es popular por su velocidad y facilidad de uso, ampliamente usado en aplicaciones web. Ambas soportan ACID (Atomicidad, Consistencia, Aislamiento, Durabilidad). SQL (Structured Query Language) es el lenguaje estándar para interactuar con estas bases de datos. Las operaciones comunes incluyen SELECT, INSERT, UPDATE, DELETE. Los índices mejoran el rendimiento de consultas. Las transacciones aseguran la integridad de datos.",
+    "tags": ["sql", "postgresql", "mysql", "database", "relational"],
+    "metadata": {
+      "category": "database",
+      "difficulty": "intermediate",
+      "author": "Database Admin"
+    }
+  },
+  {
+    "title": "Arquitectura Clean Code y SOLID",
+    "content": "Clean Code se refiere a código que es fácil de leer, entender y mantener. Los principios SOLID son cinco principios de diseño orientado a objetos: Single Responsibility (una clase debe tener una sola razón para cambiar), Open/Closed (abierto para extensión, cerrado para modificación), Liskov Substitution (objetos de una superclase deben ser reemplazables por objetos de subclases), Interface Segregation (muchas interfaces específicas son mejores que una general), y Dependency Inversion (depender de abstracciones, no de concreciones). Otros principios incluyen DRY (Don't Repeat Yourself), KISS (Keep It Simple, Stupid), y YAGNI (You Aren't Gonna Need It).",
+    "tags": ["clean-code", "solid", "architecture", "best-practices", "design-patterns"],
+    "metadata": {
+      "category": "software-engineering",
+      "difficulty": "intermediate",
+      "author": "Software Craftsman"
+    }
+  }
+]

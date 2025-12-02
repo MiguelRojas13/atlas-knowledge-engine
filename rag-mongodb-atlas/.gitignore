@@ -1,0 +1,95 @@
+# Environment variables - CREDENTIALS
+.env
+.env.local
+.env.*.local
+*.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+credentials.json
+secrets.json
+config.ini
+config.yaml
+.secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (optional, uncomment if you don't want to commit data)
+# data/raw/*
+# data/processed/*
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Security & Credentials
+*.private
+*.secret
+*_secret.*
+*_private.*
+api_keys.txt
+tokens.txt
+passwords.txt
+.password
+.token
+
+# MongoDB & Database
+*.mongodb
+*.db-journal
+dump/
+restore/
+
+# Backup files
+*.bak
+*.backup
+*.old
+*~
+
+# Temporary files
+*.tmp
+*.temp
+.cache/

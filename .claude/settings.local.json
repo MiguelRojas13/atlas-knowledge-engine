@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(python3:*)",
+      "Bash(source:*)",
+      "Bash(pip install:*)",
+      "Bash(python -c:*)",
+      "Bash(python scripts/init_db.py:*)",
+      "Bash(python scripts/create_indexes.py:*)",
+      "Bash(timeout 5 python:*)",
+      "Bash(git init:*)",
+      "Bash(git check-ignore:*)",
+      "Bash(echo:*)",
+      "Bash(chmod:*)",
+      "Bash(./verify_security.sh:*)",
+      "Bash(uvicorn:*)",
+      "Bash(curl:*)",
+      "Bash(python scripts/load_data.py:*)",
+      "Bash(python scripts/generate_embeddings.py:*)",
+      "Bash(make help:*)",
+      "Bash(./manage.sh help:*)",
+      "Bash(make status:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
