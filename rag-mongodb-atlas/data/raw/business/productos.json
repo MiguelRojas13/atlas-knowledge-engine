@@ -1,0 +1,232 @@
+[
+  {
+    "codigo": "SOFT-001",
+    "nombre": "Sistema CRM Enterprise",
+    "categoria": "software",
+    "descripcion": "Sistema completo de gestión de relaciones con clientes, incluye módulos de ventas, marketing y soporte",
+    "precio": 15000,
+    "precio_mensual": 500,
+    "stock": 0,
+    "tipo_licencia": "suscripcion",
+    "estado": "disponible",
+    "proveedor": "TechVendor Inc",
+    "caracteristicas": ["Multi-usuario", "Cloud", "API REST", "Reportes avanzados"],
+    "fecha_lanzamiento": "2023-01-15"
+  },
+  {
+    "codigo": "SOFT-002",
+    "nombre": "Plataforma E-commerce Pro",
+    "categoria": "software",
+    "descripcion": "Solución completa para tiendas online con integración de pagos y gestión de inventario",
+    "precio": 8000,
+    "precio_mensual": 300,
+    "stock": 0,
+    "tipo_licencia": "suscripcion",
+    "estado": "disponible",
+    "proveedor": "WebCommerce Solutions",
+    "caracteristicas": ["Responsive", "Multi-moneda", "SEO optimizado", "Pasarela de pago"],
+    "fecha_lanzamiento": "2023-03-20"
+  },
+  {
+    "codigo": "HARD-001",
+    "nombre": "Servidor Dell PowerEdge R740",
+    "categoria": "hardware",
+    "descripcion": "Servidor rack 2U con procesador Intel Xeon, 64GB RAM, 4TB almacenamiento",
+    "precio": 4500,
+    "stock": 12,
+    "unidad": "unidades",
+    "estado": "disponible",
+    "proveedor": "Dell Technologies",
+    "especificaciones": {
+      "procesador": "Intel Xeon Silver 4214",
+      "ram": "64GB DDR4",
+      "almacenamiento": "4TB SAS",
+      "fuente": "750W redundante"
+    },
+    "fecha_lanzamiento": "2022-11-10"
+  },
+  {
+    "codigo": "HARD-002",
+    "nombre": "MacBook Pro 16\" M3",
+    "categoria": "hardware",
+    "descripcion": "Laptop profesional Apple con chip M3, 32GB RAM, 1TB SSD",
+    "precio": 3200,
+    "stock": 25,
+    "unidad": "unidades",
+    "estado": "disponible",
+    "proveedor": "Apple Inc",
+    "especificaciones": {
+      "procesador": "Apple M3 Pro",
+      "ram": "32GB",
+      "almacenamiento": "1TB SSD",
+      "pantalla": "16\" Liquid Retina XDR"
+    },
+    "fecha_lanzamiento": "2024-01-05"
+  },
+  {
+    "codigo": "SERV-001",
+    "nombre": "Consultoría Cloud Migration",
+    "categoria": "servicios",
+    "descripcion": "Servicio de migración a la nube con análisis, planificación e implementación",
+    "precio": 12000,
+    "duracion_horas": 120,
+    "unidad": "proyecto",
+    "estado": "disponible",
+    "proveedor": "CloudExperts Consulting",
+    "incluye": ["Análisis inicial", "Plan de migración", "Implementación", "Capacitación", "Soporte 30 días"],
+    "fecha_lanzamiento": "2023-06-15"
+  },
+  {
+    "codigo": "SERV-002",
+    "nombre": "Desarrollo App Móvil Personalizada",
+    "categoria": "servicios",
+    "descripcion": "Desarrollo de aplicación móvil nativa para iOS y Android",
+    "precio": 25000,
+    "duracion_horas": 400,
+    "unidad": "proyecto",
+    "estado": "disponible",
+    "proveedor": "MobileDev Studios",
+    "incluye": ["Diseño UI/UX", "Desarrollo iOS", "Desarrollo Android", "Testing", "Despliegue", "Mantenimiento 3 meses"],
+    "fecha_lanzamiento": "2023-09-01"
+  },
+  {
+    "codigo": "SOFT-003",
+    "nombre": "Licencia Microsoft Office 365 Business",
+    "categoria": "software",
+    "descripcion": "Suite ofimática completa con Word, Excel, PowerPoint, Teams y OneDrive",
+    "precio": 150,
+    "precio_mensual": 12.50,
+    "stock": 0,
+    "tipo_licencia": "suscripcion",
+    "estado": "disponible",
+    "proveedor": "Microsoft Corporation",
+    "caracteristicas": ["Cloud", "1TB OneDrive", "Teams", "Actualizaciones automáticas"],
+    "fecha_lanzamiento": "2022-07-20"
+  },
+  {
+    "codigo": "HARD-003",
+    "nombre": "Monitor LG UltraWide 34\"",
+    "categoria": "hardware",
+    "descripcion": "Monitor panorámico 34 pulgadas, resolución 3440x1440, IPS",
+    "precio": 450,
+    "stock": 45,
+    "unidad": "unidades",
+    "estado": "disponible",
+    "proveedor": "LG Electronics",
+    "especificaciones": {
+      "tamaño": "34 pulgadas",
+      "resolucion": "3440x1440 UWQHD",
+      "tipo_panel": "IPS",
+      "frecuencia": "75Hz"
+    },
+    "fecha_lanzamiento": "2024-02-10"
+  },
+  {
+    "codigo": "SOFT-004",
+    "nombre": "Sistema ERP Integral",
+    "categoria": "software",
+    "descripcion": "Software de planificación de recursos empresariales con módulos financieros, RRHH, inventario y producción",
+    "precio": 35000,
+    "precio_mensual": 1200,
+    "stock": 0,
+    "tipo_licencia": "suscripcion",
+    "estado": "disponible",
+    "proveedor": "ERP Solutions Group",
+    "caracteristicas": ["Modular", "Escalable", "Multi-empresa", "BI integrado", "Mobile app"],
+    "fecha_lanzamiento": "2021-05-12"
+  },
+  {
+    "codigo": "HARD-004",
+    "nombre": "Switch Cisco Catalyst 48 puertos",
+    "categoria": "hardware",
+    "descripcion": "Switch de red empresarial 48 puertos Gigabit Ethernet con 4 puertos SFP+",
+    "precio": 2800,
+    "stock": 8,
+    "unidad": "unidades",
+    "estado": "disponible",
+    "proveedor": "Cisco Systems",
+    "especificaciones": {
+      "puertos": "48x 1GbE + 4x 10GbE SFP+",
+      "capacidad": "176 Gbps",
+      "poe": "PoE+ 740W",
+      "capa": "Layer 3"
+    },
+    "fecha_lanzamiento": "2023-04-18"
+  },
+  {
+    "codigo": "SERV-003",
+    "nombre": "Auditoría de Seguridad IT",
+    "categoria": "servicios",
+    "descripcion": "Evaluación completa de seguridad informática con pentesting y recomendaciones",
+    "precio": 8500,
+    "duracion_horas": 80,
+    "unidad": "proyecto",
+    "estado": "disponible",
+    "proveedor": "CyberSec Experts",
+    "incluye": ["Análisis vulnerabilidades", "Pentesting", "Informe detallado", "Plan de acción", "Seguimiento"],
+    "fecha_lanzamiento": "2023-08-25"
+  },
+  {
+    "codigo": "HARD-005",
+    "nombre": "Impresora HP LaserJet Enterprise",
+    "categoria": "hardware",
+    "descripcion": "Impresora láser multifunción A4, impresión a doble cara, red WiFi",
+    "precio": 650,
+    "stock": 18,
+    "unidad": "unidades",
+    "estado": "disponible",
+    "proveedor": "HP Inc",
+    "especificaciones": {
+      "tipo": "Láser monocromo",
+      "velocidad": "40 ppm",
+      "funciones": "Impresión, copia, escáner",
+      "conectividad": "WiFi, Ethernet, USB"
+    },
+    "fecha_lanzamiento": "2023-10-15"
+  },
+  {
+    "codigo": "SOFT-005",
+    "nombre": "Backup y Recovery Cloud",
+    "categoria": "software",
+    "descripcion": "Solución de respaldo automático en la nube con recuperación ante desastres",
+    "precio": 5000,
+    "precio_mensual": 200,
+    "stock": 0,
+    "tipo_licencia": "suscripcion",
+    "estado": "disponible",
+    "proveedor": "BackupPro Solutions",
+    "caracteristicas": ["Backup incremental", "Cifrado AES-256", "Recuperación rápida", "Retención configurable"],
+    "fecha_lanzamiento": "2023-07-30"
+  },
+  {
+    "codigo": "HARD-006",
+    "nombre": "NAS Synology 8 bahías",
+    "categoria": "hardware",
+    "descripcion": "Sistema de almacenamiento en red con 8 bahías, RAID, hasta 128TB",
+    "precio": 1800,
+    "stock": 6,
+    "unidad": "unidades",
+    "estado": "bajo_stock",
+    "proveedor": "Synology Inc",
+    "especificaciones": {
+      "bahias": "8x 3.5\" SATA",
+      "procesador": "Intel Quad-core",
+      "ram": "8GB DDR4",
+      "raid": "0, 1, 5, 6, 10"
+    },
+    "fecha_lanzamiento": "2023-11-20"
+  },
+  {
+    "codigo": "SERV-004",
+    "nombre": "Capacitación DevOps",
+    "categoria": "servicios",
+    "descripcion": "Curso intensivo de DevOps con prácticas en CI/CD, Docker, Kubernetes",
+    "precio": 3500,
+    "duracion_horas": 40,
+    "unidad": "curso",
+    "estado": "disponible",
+    "proveedor": "DevOps Academy",
+    "incluye": ["Material didáctico", "Labs prácticos", "Certificado", "Soporte post-curso"],
+    "fecha_lanzamiento": "2024-01-10"
+  }
+]

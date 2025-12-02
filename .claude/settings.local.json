@@ -20,7 +20,13 @@
       "Bash(python scripts/generate_embeddings.py:*)",
       "Bash(make help:*)",
       "Bash(./manage.sh help:*)",
-      "Bash(make status:*)"
+      "Bash(make status:*)",
+      "Bash(pkill:*)",
+      "Bash(python -m json.tool:*)",
+      "Bash(timeout 5 python3:*)",
+      "Bash(python scripts/load_business_data.py:*)",
+      "Bash(python -m scripts.load_business_data:*)",
+      "Bash(python /tmp/verify_db.py:*)"
     ],
     "deny": [],
     "ask": []

@@ -15,7 +15,7 @@ class Settings(BaseSettings):
 
     # Groq API Configuration
     GROQ_API_KEY: str = Field(..., description="Groq API key")
-    GROQ_MODEL: str = Field(default="mixtral-8x7b-32768", description="Groq model to use")
+    GROQ_MODEL: str = Field(default="llama-3.3-70b-versatile", description="Groq model to use")
 
     # Application Configuration
     ENVIRONMENT: str = Field(default="development", description="Environment")

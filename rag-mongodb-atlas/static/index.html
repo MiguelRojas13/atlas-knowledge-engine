@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAG Chat - MongoDB Atlas</title>
+    <title>Consultas MongoDB con IA - Text-to-Query</title>
     <style>
         * {
             margin: 0;
@@ -296,25 +296,89 @@
             color: white;
             border-color: #667eea;
         }
+
+        .database-schema {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .database-schema h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #667eea;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 12px;
+        }
+
+        .collection-card {
+            background: rgba(102, 126, 234, 0.05);
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 13px;
+        }
+
+        .collection-card-header {
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .collection-count {
+            background: #667eea;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+        }
+
+        .collection-fields {
+            margin-top: 8px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .field-item {
+            color: #666;
+            font-size: 12px;
+            margin: 3px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .field-type {
+            font-family: monospace;
+            color: #999;
+            font-size: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🤖 RAG Chat Assistant</h1>
-            <p>Powered by MongoDB Atlas + Groq</p>
+            <h1>🤖 Consultas MongoDB con IA</h1>
+            <p>Consulta tu base de datos en lenguaje natural</p>
             <div class="stats">
                 <div class="stat-item">
-                    <span>📚</span>
-                    <span id="docCount">20 documentos</span>
+                    <span>🗄️</span>
+                    <span id="databaseName">Cargando...</span>
                 </div>
                 <div class="stat-item">
-                    <span>🧠</span>
-                    <span>Vector Search</span>
-                </div>
-                <div class="stat-item">
-                    <span>⚡</span>
-                    <span>Groq LLM</span>
+                    <span>📊</span>
+                    <span id="collectionsCount">0 colecciones</span>
                 </div>
             </div>
         </div>
@@ -325,14 +389,14 @@
                     <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
                 </svg>
                 <h3>¡Hola! 👋</h3>
-                <p>Pregúntame sobre programación, tecnología, IA y más.</p>
+                <p>Consulta tu base de datos en lenguaje natural</p>
             </div>
 
-            <div class="suggestions">
-                <div class="suggestion-chip" onclick="sendSuggestion('¿Qué es Python?')">¿Qué es Python?</div>
-                <div class="suggestion-chip" onclick="sendSuggestion('Explícame Docker')">Explícame Docker</div>
-                <div class="suggestion-chip" onclick="sendSuggestion('¿Qué es Machine Learning?')">¿Qué es Machine Learning?</div>
-                <div class="suggestion-chip" onclick="sendSuggestion('Háblame de FastAPI')">Háblame de FastAPI</div>
+            <div class="database-schema" id="databaseSchema">
+                <h3>📊 Estructura de la Base de Datos</h3>
+                <div id="collectionsGrid" class="collections-grid">
+                    <p style="color: #999; font-size: 14px;">Cargando esquema de la base de datos...</p>
+                </div>
             </div>
 
             <div class="message assistant" style="display: none;">
@@ -380,11 +444,11 @@
             const message = messageInput.value.trim();
             if (!message) return;
 
-            // Ocultar estado vacío y sugerencias
+            // Ocultar estado vacío y esquema
             const emptyState = chatContainer.querySelector('.empty-state');
-            const suggestions = chatContainer.querySelector('.suggestions');
+            const databaseSchema = chatContainer.querySelector('.database-schema');
             if (emptyState) emptyState.style.display = 'none';
-            if (suggestions) suggestions.style.display = 'none';
+            if (databaseSchema) databaseSchema.style.display = 'none';
 
             // Agregar mensaje del usuario
             addMessage('user', message);
@@ -397,16 +461,14 @@
             scrollToBottom();
 
             try {
-                const response = await fetch('/api/rag', {
+                // Usar el endpoint de consultas en lenguaje natural
+                const response = await fetch('/api/query', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        question: message,
-                        context_limit: 3,
-                        temperature: 0.7,
-                        max_tokens: 1024
+                        question: message
                     })
                 });
 
@@ -416,8 +478,12 @@
                 typingIndicator.classList.remove('active');
                 typingIndicator.parentElement.style.display = 'none';
 
-                // Agregar respuesta
-                addMessage('assistant', data.answer, data.context);
+                // Agregar respuesta con los resultados y query info
+                if (data.error) {
+                    addMessage('assistant', '❌ Error: ' + data.error);
+                } else {
+                    addMessage('assistant', data.answer, data.query_plan, data.results, data.count);
+                }
 
             } catch (error) {
                 typingIndicator.classList.remove('active');
@@ -429,7 +495,7 @@
             messageInput.focus();
         }
 
-        function addMessage(type, content, context = null) {
+        function addMessage(type, content, queryPlan = null, results = null, count = null) {
             const messageDiv = document.createElement('div');
             messageDiv.className = `message ${type}`;
 
@@ -437,20 +503,38 @@
             contentDiv.className = 'message-content';
             contentDiv.textContent = content;
 
-            // Agregar fuentes si es asistente y hay contexto
-            if (type === 'assistant' && context && context.length > 0) {
-                const sourcesDiv = document.createElement('div');
-                sourcesDiv.className = 'context-sources';
-                sourcesDiv.innerHTML = '<strong>📚 Fuentes consultadas:</strong>';
+            // Agregar query MongoDB si es asistente y hay queryPlan
+            if (type === 'assistant' && queryPlan) {
+                const queryDiv = document.createElement('div');
+                queryDiv.className = 'context-sources';
+                queryDiv.style.marginTop = '15px';
+                queryDiv.style.background = 'rgba(102, 126, 234, 0.05)';
+                queryDiv.style.borderRadius = '8px';
+                queryDiv.style.padding = '10px';
 
-                context.forEach((src, idx) => {
-                    const sourceItem = document.createElement('div');
-                    sourceItem.className = 'source-item';
-                    sourceItem.innerHTML = `${idx + 1}. ${src.title} <span style="opacity: 0.7">(${(src.score * 100).toFixed(1)}% relevancia)</span>`;
-                    sourcesDiv.appendChild(sourceItem);
-                });
+                let queryHTML = `<strong>🔍 Query MongoDB Ejecutada:</strong><br>`;
+                queryHTML += `<code style="font-size: 11px; background: rgba(0,0,0,0.05); padding: 8px; border-radius: 4px; display: block; margin-top: 5px; overflow-x: auto;">`;
+                queryHTML += `db.${queryPlan.collection}.${queryPlan.operation}(`;
 
-                contentDiv.appendChild(sourcesDiv);
+                if (queryPlan.operation === 'aggregate') {
+                    queryHTML += `\n  ${JSON.stringify(queryPlan.query, null, 2).replace(/\n/g, '\n  ')}`;
+                } else if (queryPlan.operation === 'find') {
+                    queryHTML += `${JSON.stringify(queryPlan.query)}`;
+                    if (queryPlan.projection && Object.keys(queryPlan.projection).length > 0) {
+                        queryHTML += `, ${JSON.stringify(queryPlan.projection)}`;
+                    }
+                } else {
+                    queryHTML += `${JSON.stringify(queryPlan.query)}`;
+                }
+
+                queryHTML += `)</code>`;
+
+                if (count !== null && count !== undefined) {
+                    queryHTML += `<br><small style="opacity: 0.7;">Resultados: ${count}</small>`;
+                }
+
+                queryDiv.innerHTML = queryHTML;
+                contentDiv.appendChild(queryDiv);
             }
 
             messageDiv.appendChild(contentDiv);
@@ -462,18 +546,65 @@
             chatContainer.scrollTop = chatContainer.scrollHeight;
         }
 
-        // Cargar estadísticas al inicio
-        async function loadStats() {
+        // Cargar esquema de base de datos al inicio
+        async function loadDatabaseSchema() {
             try {
-                const response = await fetch('/api/collections/documents/stats');
+                const response = await fetch('/api/database/schema');
                 const data = await response.json();
-                document.getElementById('docCount').textContent = `${data.document_count} documentos`;
+
+                // Actualizar header con nombre de base de datos
+                document.getElementById('databaseName').textContent = `DB: ${data.database}`;
+                document.getElementById('collectionsCount').textContent = `${data.total_collections} colecciones`;
+
+                // Renderizar colecciones
+                const collectionsGrid = document.getElementById('collectionsGrid');
+                collectionsGrid.innerHTML = '';
+
+                if (data.collections.length === 0) {
+                    collectionsGrid.innerHTML = '<p style="color: #999; font-size: 14px;">No hay colecciones disponibles</p>';
+                    return;
+                }
+
+                data.collections.forEach(collection => {
+                    const card = document.createElement('div');
+                    card.className = 'collection-card';
+
+                    let fieldsHTML = '';
+                    if (collection.fields && collection.fields.length > 0) {
+                        fieldsHTML = '<div class="collection-fields">';
+                        collection.fields.slice(0, 5).forEach(field => {
+                            fieldsHTML += `
+                                <div class="field-item">
+                                    <span>${field.name}</span>
+                                    <span class="field-type">${field.type}</span>
+                                </div>
+                            `;
+                        });
+                        if (collection.fields.length > 5) {
+                            fieldsHTML += `<div class="field-item" style="color: #999; font-style: italic;">...y ${collection.fields.length - 5} más</div>`;
+                        }
+                        fieldsHTML += '</div>';
+                    }
+
+                    card.innerHTML = `
+                        <div class="collection-card-header">
+                            <span>${collection.name}</span>
+                            <span class="collection-count">${collection.count}</span>
+                        </div>
+                        ${fieldsHTML}
+                    `;
+
+                    collectionsGrid.appendChild(card);
+                });
+
             } catch (error) {
-                console.error('Error loading stats:', error);
+                console.error('Error loading database schema:', error);
+                document.getElementById('collectionsGrid').innerHTML =
+                    '<p style="color: #f44336; font-size: 14px;">Error cargando esquema de la base de datos</p>';
             }
         }
 
-        loadStats();
+        loadDatabaseSchema();
     </script>
 </body>
 </html>

@@ -17,14 +17,39 @@ from api.routes import router as api_router
 async def lifespan(app: FastAPI):
     """Manejo del ciclo de vida de la aplicación"""
     # Startup
-    await mongodb.connect()
-    print(f"✅ Conectado a MongoDB: {settings.MONGODB_DB_NAME}")
+    print("\n" + "="*70)
+    print("🚀 Iniciando RAG MongoDB Atlas API...")
+    print("="*70)
+
+    try:
+        await mongodb.connect()
+
+        # Validar conexión con MongoDB
+        collection = mongodb.get_collection(settings.DOCUMENTS_COLLECTION)
+        doc_count = await collection.count_documents({})
+
+        print(f"\n✅ MongoDB Atlas: CONECTADO")
+        print(f"   📊 Base de datos: {settings.MONGODB_DB_NAME}")
+        print(f"   📄 Documentos disponibles: {doc_count}")
+        print(f"   🌐 Servidor: http://localhost:8000")
+        print(f"   📚 Documentación: http://localhost:8000/docs")
+        print(f"   💬 Chat Interface: http://localhost:8000")
+        print("\n" + "="*70 + "\n")
+
+    except Exception as e:
+        print(f"\n❌ Error al conectar con MongoDB: {e}")
+        print("   Verifica tus credenciales en el archivo .env")
+        print("="*70 + "\n")
+        raise
 
     yield
 
     # Shutdown
+    print("\n" + "="*70)
+    print("🛑 Deteniendo servidor...")
     await mongodb.disconnect()
-    print("❌ Desconectado de MongoDB")
+    print("✅ Desconectado de MongoDB")
+    print("="*70 + "\n")
 
 
 app = FastAPI(

@@ -1,0 +1,212 @@
+[
+  {
+    "nombre": "TechCorp Solutions",
+    "tipo": "empresa",
+    "contacto": {
+      "nombre": "María González",
+      "email": "maria.gonzalez@techcorp.com",
+      "telefono": "+34 912 345 678"
+    },
+    "direccion": {
+      "calle": "Av. Tecnología 123",
+      "ciudad": "Madrid",
+      "pais": "España",
+      "codigo_postal": "28001"
+    },
+    "fecha_registro": "2023-01-15",
+    "estado": "activo",
+    "categoria": "premium",
+    "credito_disponible": 50000,
+    "total_compras": 125000,
+    "descuento_aplicable": 15
+  },
+  {
+    "nombre": "Innovatech SL",
+    "tipo": "empresa",
+    "contacto": {
+      "nombre": "Carlos Rodríguez",
+      "email": "carlos@innovatech.es",
+      "telefono": "+34 913 456 789"
+    },
+    "direccion": {
+      "calle": "Calle Innovación 45",
+      "ciudad": "Barcelona",
+      "pais": "España",
+      "codigo_postal": "08001"
+    },
+    "fecha_registro": "2023-03-20",
+    "estado": "activo",
+    "categoria": "estandar",
+    "credito_disponible": 25000,
+    "total_compras": 45000,
+    "descuento_aplicable": 10
+  },
+  {
+    "nombre": "DataSystems Inc",
+    "tipo": "empresa",
+    "contacto": {
+      "nombre": "Ana Martínez",
+      "email": "ana.martinez@datasystems.com",
+      "telefono": "+34 914 567 890"
+    },
+    "direccion": {
+      "calle": "Plaza Datos 7",
+      "ciudad": "Valencia",
+      "pais": "España",
+      "codigo_postal": "46001"
+    },
+    "fecha_registro": "2022-11-10",
+    "estado": "activo",
+    "categoria": "premium",
+    "credito_disponible": 75000,
+    "total_compras": 280000,
+    "descuento_aplicable": 20
+  },
+  {
+    "nombre": "SmartCode Labs",
+    "tipo": "startup",
+    "contacto": {
+      "nombre": "Pedro Sánchez",
+      "email": "pedro@smartcode.io",
+      "telefono": "+34 915 678 901"
+    },
+    "direccion": {
+      "calle": "Calle Startup 12",
+      "ciudad": "Sevilla",
+      "pais": "España",
+      "codigo_postal": "41001"
+    },
+    "fecha_registro": "2024-01-05",
+    "estado": "activo",
+    "categoria": "estandar",
+    "credito_disponible": 15000,
+    "total_compras": 8500,
+    "descuento_aplicable": 5
+  },
+  {
+    "nombre": "CloudFirst Technologies",
+    "tipo": "empresa",
+    "contacto": {
+      "nombre": "Laura Fernández",
+      "email": "laura@cloudfirst.com",
+      "telefono": "+34 916 789 012"
+    },
+    "direccion": {
+      "calle": "Av. Nube 88",
+      "ciudad": "Bilbao",
+      "pais": "España",
+      "codigo_postal": "48001"
+    },
+    "fecha_registro": "2023-06-15",
+    "estado": "activo",
+    "categoria": "premium",
+    "credito_disponible": 60000,
+    "total_compras": 195000,
+    "descuento_aplicable": 18
+  },
+  {
+    "nombre": "Digital Dynamics",
+    "tipo": "empresa",
+    "contacto": {
+      "nombre": "Jorge López",
+      "email": "jorge.lopez@digitaldynamics.es",
+      "telefono": "+34 917 890 123"
+    },
+    "direccion": {
+      "calle": "Calle Digital 34",
+      "ciudad": "Málaga",
+      "pais": "España",
+      "codigo_postal": "29001"
+    },
+    "fecha_registro": "2023-09-01",
+    "estado": "inactivo",
+    "categoria": "estandar",
+    "credito_disponible": 10000,
+    "total_compras": 22000,
+    "descuento_aplicable": 8
+  },
+  {
+    "nombre": "AI Solutions Group",
+    "tipo": "empresa",
+    "contacto": {
+      "nombre": "Elena Ruiz",
+      "email": "elena@aisolutions.com",
+      "telefono": "+34 918 901 234"
+    },
+    "direccion": {
+      "calle": "Av. Inteligencia Artificial 99",
+      "ciudad": "Madrid",
+      "pais": "España",
+      "codigo_postal": "28002"
+    },
+    "fecha_registro": "2022-07-20",
+    "estado": "activo",
+    "categoria": "premium",
+    "credito_disponible": 100000,
+    "total_compras": 450000,
+    "descuento_aplicable": 25
+  },
+  {
+    "nombre": "WebDev Studios",
+    "tipo": "startup",
+    "contacto": {
+      "nombre": "Miguel Torres",
+      "email": "miguel@webdevstudios.io",
+      "telefono": "+34 919 012 345"
+    },
+    "direccion": {
+      "calle": "Calle Web 56",
+      "ciudad": "Zaragoza",
+      "pais": "España",
+      "codigo_postal": "50001"
+    },
+    "fecha_registro": "2024-02-10",
+    "estado": "activo",
+    "categoria": "basico",
+    "credito_disponible": 5000,
+    "total_compras": 3200,
+    "descuento_aplicable": 0
+  },
+  {
+    "nombre": "Enterprise Solutions SA",
+    "tipo": "corporacion",
+    "contacto": {
+      "nombre": "Isabel García",
+      "email": "isabel.garcia@enterprise.com",
+      "telefono": "+34 910 123 456"
+    },
+    "direccion": {
+      "calle": "Gran Vía Empresarial 1",
+      "ciudad": "Madrid",
+      "pais": "España",
+      "codigo_postal": "28003"
+    },
+    "fecha_registro": "2021-05-12",
+    "estado": "activo",
+    "categoria": "enterprise",
+    "credito_disponible": 250000,
+    "total_compras": 1200000,
+    "descuento_aplicable": 30
+  },
+  {
+    "nombre": "MobileDev Partners",
+    "tipo": "empresa",
+    "contacto": {
+      "nombre": "Roberto Díaz",
+      "email": "roberto@mobiledev.es",
+      "telefono": "+34 911 234 567"
+    },
+    "direccion": {
+      "calle": "Calle Móvil 23",
+      "ciudad": "Alicante",
+      "pais": "España",
+      "codigo_postal": "03001"
+    },
+    "fecha_registro": "2023-04-18",
+    "estado": "activo",
+    "categoria": "estandar",
+    "credito_disponible": 30000,
+    "total_compras": 67000,
+    "descuento_aplicable": 12
+  }
+]
